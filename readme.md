@@ -14,8 +14,8 @@ Visit [Documentation](http://lavalite.org/docs) section in the website
 ## System Requirements & Installation
 
 Visit [Installation](http://lavalite.org/docs/master/installation) section in the documentation for the details
-
-
+#LIVE URL 
+https://www.bhicp.com/
 ## Demo
 Content Management System [https://lavalite.org/demo.html](https://lavalite.org/demo.html)
 
