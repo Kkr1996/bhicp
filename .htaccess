@@ -1,0 +1,59 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    RewriteCond %{HTTPS} !on
+    RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+RewriteCond %{HTTP_HOST} ^bhicp\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bhicp\.com$
+RewriteRule ^properties\.html\/?(.*)$ "https\:\/\/bhicp\.com\/property$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^bhicp\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bhicp\.com$
+RewriteRule ^lease\.html\/?(.*)$ "https\:\/\/www\.bhicp\.com\/property\?id\=land_sale$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^bhicp\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bhicp\.com$
+RewriteRule ^contact\.php\/?(.*)$ "https\:\/\/bhicp\.com\/contact$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^bhicp\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bhicp\.com$
+RewriteRule ^land\.html\/?(.*)$ "https\:\/\/bhicp\.com\/property\?id\=land_sale$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^bhicp\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bhicp\.com$
+RewriteRule ^history\.html\/?(.*)$ "https\:\/\/bhicp\.com\/about$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^bhicp\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bhicp\.com$
+RewriteRule ^sale\.html\/?(.*)$ "https\:\/\/bhicp\.com\/property\?id\=sale$1" [R=301,L]
+
+
+#Disable index view
+options -Indexes
+
+#hide a Specifuc File
+
+<Files .env>
+order allow,deny
+Deny from all
+</Files>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

@@ -1,0 +1,661 @@
+@charset "UTF-8";
+
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	}
+body{
+	font-family: Helvetica, Arial, Sans-serif;
+	background: url(/images/body-bg3.jpg);
+}
+
+a, a:visited { color: #67b256; text-decoration: none; outline: 0; }
+a:hover, a:focus { text-decoration: underline; }
+
+
+p{
+	font-size: 11px;
+	color: #000000;
+	line-height: 17px;
+}
+h1{
+	font-size: 16px;
+	font-weight:bold;
+	color: #194694;
+	line-height: 22px;
+}
+
+h2{ font-size: 12px; color: #194694; }
+
+
+.wrap-header {
+	background-color: #FFF;
+	width: 100%;
+	margin-top: 30px;
+	z-index: 40;
+}
+
+.wrap-content {
+	width: 100%;
+	background-repeat: repeat-x;
+	z-index: 0;
+}
+
+.wrap-slides {
+	width: 100%;
+	background-image: url(../images/gallery-bgd.jpg);
+	margin-top: 5px;
+	box-shadow: 1px 1px 7px #333333;
+}
+
+h1.logo a{
+	display: block;
+	width: 208px;
+	height: 89px;
+	float: left;
+	/* Nicolas Gallagher Image replacement technique */
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	background-image: url(../images/bhipc-logo.png);
+	margin-left: 20px;
+}
+
+.logo{
+	display: block;
+	float: left;
+}
+
+.logo img {
+	width: 208px;
+	height: 89px;
+	margin-left: 20px;
+}
+
+nav.main {
+	float: right;
+	margin: 68px 30px 0 0;
+}
+ 
+nav.main ul li {
+	display: inline;
+	margin: 0 0 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+ 
+nav.main a {
+	color: #8A7967;
+	text-decoration: none;
+	padding: 10px 10px 10px 10px;
+}
+ 
+nav.main a:hover {
+	border-bottom: solid;
+	border-bottom-color: #004693;
+	border-bottom-width: 18px;
+}
+
+.slides {
+	display: none;
+	margin: 0 auto;
+	max-width:1200px;
+}
+
+.content {
+	box-shadow: 1px 1px 7px #333333;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.address div {
+	overflow: hidden;
+}
+
+.address-wide div {
+	overflow: hidden;
+}
+
+.address-wide-contact div {
+	overflow: hidden;
+}
+
+.address img.icons{
+	float: left;
+	margin-right: 5px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+.address img.fb{
+	float: right;
+	margin-right: 20px;
+}
+
+.address-wide img.fb{
+	float: right;
+	margin-right: 68px;
+}
+
+.address-wide img.icons{
+	float: left;
+	margin-right: 5px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+.address-wide-contact img.fb{
+	float: right;
+	margin-right: 68px;
+}
+
+.address-wide-contact img.icons{
+	float: left;
+	margin-right: 5px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+.address p{
+	color: #000;
+	font-size: 10px;
+	line-height: 13px;
+	float:right;
+	margin-right: 15px;
+}
+
+.address-wide p{
+	color: #000;
+	font-size: 10px;
+	line-height: 13px;
+	float: right;
+	margin-right: 65px;
+}
+
+.address-wide-contact p{
+	color: #000;
+	font-size: 10px;
+	line-height: 13px;
+	float: right;
+	margin-right: 65px;
+}
+
+.telephone {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #194694;
+	font-weight: 700;
+}
+
+.feature {
+	height: 147px;
+	padding-left: 8px;
+}
+
+.feature img {
+	width:190px;
+	height: 147px;
+}
+
+.maincopy img {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin: 12px 0px 5px 20px;
+	float: right;
+}
+
+.maincopy {
+	padding-right: 25px;
+	text-align: justify;
+}
+
+.maincopy p a {
+	color:#900;
+}
+
+.maincopy ul li {
+	font-size:12px;
+	line-height: 11px;
+	list-style-type: disc;
+	list-style-position: inside;
+	text-indent:15px;
+}
+
+.maincopy ul li a {
+	color:#900;
+}
+
+.maincopy-slim {
+	margin-top:40px;
+	padding-right: 25px;
+	text-align: justify;
+}
+
+.maincopy-slim p a {
+	color:#900;
+}
+
+.maincopy-slim ul li {
+	font-size:12px;
+	line-height: 11px;
+	list-style-type: disc;
+	list-style-position: inside;
+	text-indent:15px;
+}
+
+.maincopy-slim ul li a {
+	color:#900;
+}
+
+
+/* WIDGET */
+
+footer{
+	background-color: #004693;
+	padding: 0 0 30px 0;
+	min-height: 250px;
+	padding-top: 18px;
+	padding-bottom: 25px;
+}
+
+footer a, a:visited { color: #ffffff; text-decoration: none; outline: 0; }
+		a:hover, a:focus {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+footer img.scdesign{
+	margin-top: 0;
+}
+
+footer img.bhicp{
+	margin-top: 14px;
+	float:right;
+	margin-right: 15px;
+}
+
+.scdesign{ }
+
+.botlogo{ }
+
+.botlinks {
+	font-size:11px;
+	text-align:right;
+	padding-top: 23px;
+}
+
+.botlinks p {
+	color: #FFF;
+}
+
+.copyright {
+	font-size: 9px;
+	color: #FFF;
+}
+
+nav.prop {
+	margin-left: 20px;
+	padding: 5px 0 5px 3px;
+}
+
+nav.prop ul li {
+	width: 80%;
+	background-color: #004693;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 4px 0 4px 5px;
+	padding: 7px 5px 7px 8px;
+}
+
+nav.prop a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: 1px 1px 10px #333333;
+}
+
+nav.prop ul li:hover {
+	background-color: #aca095;
+}
+
+.prop-categories {
+	overflow:visible;
+}
+
+.prop-categories a{
+	float:left;
+	display:inline-block;
+	margin-right: 15px;
+	margin-top:10px;
+	width:140px;
+	height: auto;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color:#004693;
+	padding: 15px;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:#FFF;
+	text-decoration: none;
+	text-shadow: 1px 1px 10px #333333;
+}
+
+.prop-categories a:hover{
+	background-color:#900;
+}
+ 
+.prop-listings {
+	overflow: hidden;
+	width: 550px;
+	margin: 0 0 30px 40px;
+}
+
+.prop-listings img {
+	width: 200px;
+	height: 143px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin-right: 25px;
+	float: left;
+}
+
+.prop-listings H2 {
+	font-size: 12pt;
+	line-height: 24px;
+	font-weight: bold;
+}
+
+.prop-listings a {
+	color: #194694;
+	text-decoration:underline;
+}
+
+.prop-listings a:hover {
+	text-decoration: none;
+}
+
+.prop-listings ul li {
+	font-size:13px;
+	line-height: 9px;
+	list-style-type: none;
+}
+
+.prop-expanded {
+	overflow: hidden;
+}
+
+.prop-expanded img {
+	width: 240px;
+	height: 173px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin-right: 70px;
+	margin-top: 35px;
+	margin-left: 10px;
+	float: right;
+	clear: right;
+}
+
+.prop-expanded H1 {
+	font-size: 14pt;
+	line-height: 24px;
+}
+
+.prop-expanded H2 {
+	font-size: 11pt;
+	line-height: 24px;
+	color: #aca095;
+}
+
+.prop-address {
+	font-size: 14pt;
+	line-height: 24px;
+	color: #004693;
+	font-weight: bold;
+}
+
+.prop-city {
+	font-size: 11pt;
+	color: #aca095;
+	top:auto;
+}
+
+.more-info {
+	font-size: 13px;
+	font-weight: bold;
+	background-color:#900;
+	color: #ffffff;
+	margin-top: 20px;
+	padding: 5px 10px 5px 10px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	float: right;
+}
+
+.prop-price {
+	font-size: 15px;
+	font-weight: bold;
+	background-color:#900;
+	color: #ffffff;
+	padding: 10px 15px 10px 15px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.prop-expanded ul li {
+	font-size:13px;
+	list-style: disc;
+	list-style-position: inside;
+	line-height: 8px;
+	text-indent: 25px;
+}
+
+.prop-expanded ul li a {
+	color: #900;
+	text-decoration: underline;
+	font-weight:bold;
+}
+
+.printer-friendly {
+	float:right;
+	margin-right: 65px;
+	margin-top: 20px;
+	bottom: auto;
+}
+
+.printer-friendly img {
+	width:100px;
+	height:27px;
+}
+
+.email-button {
+	font-size: 13px;
+	background-color:#aca095;
+	color: #ffffff;
+	padding: 3px 7px 3px 7px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.disclaimer {
+	font-size:9px;
+	line-height:10px;
+	margin: 15px 80px 10px 0;
+	clear:left;
+}
+
+/* END WIDGET */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {	
+	p{font-size: 10px; line-height: 16px;}
+	h1{font-size: 16px; line-height: 22px; text-align:left;}
+	h1.logo a{width:166px; height:71px; background-image: url(../images/bhipc-logo-80.png); margin-left: 23px;}
+	.logo img{width:166px; height:71px; margin-left: 23px;}
+	nav.main {margin: 53px 20px 0 0;}
+ 	nav.main ul li {font-size: 0.83em;}
+ 	nav.main a {padding: 9px 9px 9px 9px;}
+ 	nav.main a:hover {border-bottom-width: 19px;}
+	.wrap-slides {margin-top: 3px;}
+	.content {box-shadow:none; 	padding-top:35px;}
+	.feature {height:131px; padding-left:0px;}
+	.feature img {width:170px; height: 131px;}
+	.address img.icons{display:none;}
+	.address img.fb{margin-right: 14px;}
+	.address p{line-height: 13px; margin-right: 10px;}
+	.address-wide img.icons{margin-left: 18px;}
+	.address-wide img.fb{margin-right: 32px;}
+	.address-wide p{margin-right: 28px;}
+	.maincopy {padding-right: 25px;}
+	.botlinks {padding-top: 23px; padding-right:10px; padding-left:60px;}
+	footer {min-height:200px}
+	footer img.bhicp{margin-top: 14px; margin-right: 15px;}
+	.copyright {line-height: 32px;}
+	.prop-expanded img {width:204px; height:147px; margin-top:25px; margin-right:50px;}
+	.printer-friendly {margin-right: 40px; margin-top: 20px;}
+	.address-wide-contact img.fb{margin-right: 78px; margin-top:0px;}
+	.address-wide-contact img.icons{display:none;}
+	.address-wide-contact p{float:left; margin-right:10px; margin-bottom:25px; margin-top:0px;}
+	.maincopy ul li {text-indent:5px;}
+	.maincopy-slim ul li {text-indent:5px;}
+	.prop-categories a{font-size:15px; margin-right: 10px; margin-top:8px; width:115px; height: auto;}
+
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		
+	h1.logo a{width:208px; height:89px; background-image: url(../images/bhipc-logo.png); margin-left: 0px; margin-top:24px;}
+	.logo img{width:208px; height:89px; margin-left: 0px; margin-top:24px;}
+	nav.main {clear:right; margin: 0px 25px 0px auto;}
+	nav.main ul li {display:block; text-align:left; font-size: 0.9em;line-height:24px;}
+	nav.main a {padding: 1px 0px 1px 0px;}
+ 	nav.main a:hover {border-bottom-width: 4px;}
+	.wrap-slides {width:95%; height:150px; background-image: url(../images/slider2.jpg); background-position:center; margin-top: 2px; box-shadow: none; margin-left:auto; margin-right:auto;-moz-border-radius: 6px; border-radius: 6px;}
+ 	.slides {visibility:hidden;}
+	.content {padding-top:25px;}
+	.address p {float:left; padding-left:5px;}
+	.address img.fb{margin-right: 20px;}
+	.feature {display:none; height:auto; padding-left:0px;}
+	.feature img {display:none; width:auto; height:auto;}
+	.address-wide img.fb{margin-right: 15px; margin-top:12px;}
+	.address-wide img.icons{display:none;}
+	.address-wide p{float: left; margin:10px 0 0 30px;}
+	.printer-friendly {margin-right: 12px; margin-top: 20px;}
+	nav.prop {float:left; margin-left: 0px; padding: 5px 0 5px 0px;}
+	nav.prop ul li {width: 150px; margin: 1px 0 4px 0px;}
+	.prop-listings {width: auto; margin: 0 0 20px 0px;}
+	.prop-listings img {margin-right: 30px; margin-bottom:10px;}
+	.prop-listings H2 {font-size: 11pt; line-height: 22px;}
+	.prop-listings ul li {font-size:12px; line-height: 10px;}
+	.prop-expanded img {width:120px; height:86px; margin-right:0px; margin-top:10px; margin-left:5px; margin-bottom:10px; float:right; clear:right}
+	.prop-address {font-size: 12pt; line-height: 22px;}
+	.prop-city {font-size: 10pt;}
+	.prop-price {line-height:16px;}
+	.prop-expanded ul li {font-size:12px; text-indent: 15px;}
+	.disclaimer {margin: 15px 0px 10px 0; text-align:center;}
+	.maincopy {padding-right: 5px; padding-left:5px; padding-top:20px;}
+	.maincopy-slim {margin-top:none;}
+	.maincopy ul li {text-indent:20px;}
+	.maincopy-slim ul li {text-indent:20px;}
+	footer img.bhicp{display:block; width:162px; height:80px; margin-top: -12px; margin-left:auto; margin-right:auto; float:none;}
+	.scdesign{display:none;}
+	.botlogo{ }
+	.botlinks {padding-right:20px; padding-left:20px; text-align:center; padding-top:10px;}
+	.botlinks p {display:inline-block; font-size:12px; line-height:18px}
+	.copyright {font-size: 9px; color: #FFF;}
+	.address-wide-contact img.fb{float:right; margin-right: 20px; margin-top:0px;}
+	.address-wide-contact p{float:left; margin-right:none; margin-left:5px; margin-bottom:25px; margin-top:0px;}
+	.maincopy-slim {padding-left:5px;}
+	.prop-categories a{font-size:15px; margin-right: 12px; margin-top:8px; width:120px; height: auto;}
+}
+	
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		
+	.wrap-header {margin-top: 20px;}
+	h1.logo a{width:166px; height:71px; background-image: url(../images/bhipc-logo-80.png); margin-top:30px;}
+	.logo img{width:166px; height:71px; margin-top:30px;}
+	nav.main {clear:right; margin: 0px 10px 0px auto;}
+	.wrap-slides {width:93%; height:130px; background-image: url(../images/slider4sm.jpg); margin-top:-10px; -moz-border-radius: 6px; border-radius: 6px;}
+	.content {padding-top:19px;}
+	nav.prop ul li {width: 160px;}
+	.address p {float:left; padding-left:5px;}
+	.address img.fb{margin-right: 20px;}
+	.feature {display:none; height:auto; padding-left:0px;}
+	.feature img {display:none; width:auto; height:auto;}
+	.prop-expanded img {width:105px; height:75px; margin-right:0px; margin-top:10px; margin-left:5px; margin-bottom:5px;}
+	.prop-expanded ul li {text-indent: 0px; line-height:14px;}
+	.prop-price {line-height:22px; background-color:#FFF; color:#900; padding: 0px 0px 0px 0px;}
+	.prop-listings {width: auto; margin: 0 0 15px 0px; border-bottom:solid 1px #666;}
+	.prop-listings img {float:right; width:130px; height:93px; margin-right: 0px; margin-left:12px; margin-bottom:0px; margin-top:0px;}
+	.prop-listings H2 {font-size: 11pt; line-height: 18px;}
+	.prop-listings ul li {line-height: 13px;}
+	.printer-friendly {display:none;}
+	.address-wide img.fb{width:80px; height:21px; margin-right: 24px; margin-top:9px;}
+	.address-wide p{float: left; margin:10px 0 0 35px; line-height: 12px;}
+	footer img.bhicp{width:130px; height:62px; margin-top: -12px;}
+	.botlinks {padding-right:5px; padding-left:5px;}
+	.maincopy img { display:none;}
+	.prop-categories a{font-size:15px; margin-right:none; margin-left:20px; margin-top:10px; width:80%; height: auto;}
+	
+	}
+	
+	/* Printer Friendly */
+	@media print {
+	body{ background-color:#FFFFFF; background-image:none; color:#000000 }
+	.wrap-slides{ display:none;}
+	.content{ box-shadow: 0px 0px 0px #ffffff;}
+	.main{ display:none;}
+	.prop{ display:none;}
+	footer{ display:none;}
+	.prop-expanded H1{ color:#000;}
+	.prop-expanded H2 {color: #000;}
+	.prop-address { color: #000;}
+	.prop-city { color: #000;}
+	.prop-price { color: #000;}
+	.address-wide img.fb{ display:none;}
+	.telephone { color: #000;}
+	.prop-expanded{ width:100%;}
+	.printer-friendly {display:none;}
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
